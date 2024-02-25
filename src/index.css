@@ -1,0 +1,54 @@
+
+/* Nav Bar */
+*{
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  background-image: url('./assets/calmKid.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.nav{
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  backdrop-filter: blur(10px);
+  border: 0.1px solid rgb(179, 179, 179);
+}
+
+.nav-logo{
+margin-left: 0.5rem;
+font-weight: bold;
+font-size: 3rem;
+display: flex;
+align-items: center;
+font-family: monospace;
+gap: 2rem;
+padding: 0 1rem;
+filter: drop-shadow(20px 7px 5px white);
+}
+
+.nav-links{
+  color: inherit;
+  font-family: monospace;
+  padding: 1;
+  margin: 1;
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  font-size: large;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+
+.nav-links :hover{
+ scale: 1.7;
+}
