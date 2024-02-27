@@ -10,7 +10,7 @@ export default function NavBar(){
                         <a href="/LogIn">Log In</a>
                     </li>
                     <li>
-                        <a href="/SignUp">Sign In</a>
+                        <a href="/SignUp">Sign Up</a>
                     </li>
                 </ul>
             </nav>
