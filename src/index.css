@@ -56,19 +56,19 @@ a{
 
 /* Sign Up page */
 
-.sign-up-head{
+.sign-log-head{
   width: 100%;
   display: flex;
   justify-content: center;
 }
 
-.sign-up-container{
+.sign-log-container{
   width: 100%;
   display: flex;
   justify-content: center;
 }
 
-.sign-up-form {
+.sign-log-form {
   width: 300px;
   margin: 0 auto;
   display: flex;
@@ -79,10 +79,15 @@ a{
   border-radius: 10px;
 }
 
-.sign-up-lable {
-  display: block;
+.sign-log-lable {
   margin-top: 5px;
   margin-bottom: 5px;
+  top: 50px;
+  left: 8px;
+  transform: translateY(-50%);
+  padding: 0 5px;
+  transition: all 0.2s ease-in-out;
+  
 }
 
 input[type="text"],
@@ -96,7 +101,18 @@ input[type="password"] {
     box-sizing: border-box;
 }
 
-.sign-up-button{
+.container-input{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.container-input:focus-within label{
+  top: 0;
+  font-size: 12px;
+}
+
+.sign-log-button{
     background-color: #4CAF50;
     color: white;
     padding: 10px 20px;
@@ -105,6 +121,6 @@ input[type="password"] {
     cursor: pointer;
 }
 
-.sign-up-button:hover {
+.sign-log-button:hover {
   background-color: #45a049;
 }
