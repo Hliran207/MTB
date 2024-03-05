@@ -1,17 +1,16 @@
-
 /* Nav Bar */
-*{
+* {
   box-sizing: border-box;
 }
 
-body{
+body {
   margin: 0;
-  background-image: url('./assets/calmKid.jpg');
+  background-image: url("./assets/calmKid.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-.nav{
+.nav {
   color: white;
   display: flex;
   justify-content: space-between;
@@ -21,19 +20,19 @@ body{
   border: 0.1px solid rgb(179, 179, 179);
 }
 
-.nav-logo{
-margin-left: 0.5rem;
-font-weight: bold;
-font-size: 3rem;
-display: flex;
-align-items: center;
-font-family: monospace;
-gap: 2rem;
-padding: 0 1rem;
-filter: drop-shadow(20px 7px 5px white);
+.nav-logo {
+  margin-left: 0.5rem;
+  font-weight: bold;
+  font-size: 3rem;
+  display: flex;
+  align-items: center;
+  font-family: monospace;
+  gap: 2rem;
+  padding: 0 1rem;
+  filter: drop-shadow(20px 7px 5px white);
 }
 
-.nav-links{
+.nav-links {
   color: inherit;
   font-family: monospace;
   padding: 1;
@@ -44,11 +43,68 @@ filter: drop-shadow(20px 7px 5px white);
   font-size: large;
 }
 
-a{
+a {
   text-decoration: none;
   color: white;
 }
 
-.nav-links :hover{
- scale: 1.7;
+.nav-links :hover {
+  scale: 1.7;
+}
+.hero {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.primary-heading {
+  font-size: clamp(2rem, 5vw, 4rem);
+  color: #000000;
+  line-height: 10rem;
+  max-width: 600px;
+  margin: 10rem 10rem;
+  margin-left: 30rem;
+}
+
+.primary-text {
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  max-width: 500px;
+  color: #0d0404;
+  margin: -12rem 3rem;
+  margin-left: 28rem;
+}
+.Features {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.features-headline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20rem;
+}
+
+.featureslist {
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+}
+.feature-item {
+  margin-right: 10px;
+  text-align: center;
+  position: relative;
+}
+.feature-item button {
+  padding: 5px;
+  font-size: 14px;
+}
+.description {
+  margin: 1rem 1rem 20rem 1rem;
+  text-align: center;
 }
