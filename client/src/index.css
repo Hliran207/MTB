@@ -1,17 +1,16 @@
-
 /* Nav Bar */
-*{
+* {
   box-sizing: border-box;
 }
 
-body{
+body {
   margin: 0;
-  background-image: url('./assets/calmKid.jpg');
+  background-image: url("./assets/calmKid.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-.nav{
+.nav {
   color: white;
   display: flex;
   justify-content: space-between;
@@ -21,19 +20,19 @@ body{
   border: 0.1px solid rgb(179, 179, 179);
 }
 
-.nav-logo{
-margin-left: 0.5rem;
-font-weight: bold;
-font-size: 3rem;
-display: flex;
-align-items: center;
-font-family: monospace;
-gap: 2rem;
-padding: 0 1rem;
-filter: drop-shadow(20px 7px 5px white);
+.nav-logo {
+  margin-left: 0.5rem;
+  font-weight: bold;
+  font-size: 3rem;
+  display: flex;
+  align-items: center;
+  font-family: monospace;
+  gap: 2rem;
+  padding: 0 1rem;
+  filter: drop-shadow(20px 7px 5px white);
 }
 
-.nav-links{
+.nav-links {
   color: inherit;
   font-family: monospace;
   padding: 1;
@@ -44,25 +43,101 @@ filter: drop-shadow(20px 7px 5px white);
   font-size: large;
 }
 
-a{
+a {
   text-decoration: none;
   color: white;
 }
 
-.nav-links :hover{
- scale: 1.7;
+.nav-links :hover {
+  scale: 1.7;
 }
 
+/* landing page */
+
+.hero {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.primary-heading {
+  font-size: clamp(2rem, 5vw, 4rem);
+  color: #4c4c4c;
+  line-height: 10rem;
+  max-width: 600px;
+  margin: 10rem 10rem;
+  margin-left: 30rem;
+  backdrop-filter: blur(5px);
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.primary-text {
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  max-width: 500px;
+  color: #191919;
+  margin: -10rem 3rem;
+  margin-left: 28rem;
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
+}
+.features-headline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15rem;
+}
+
+.featureslist {
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+}
+.feature-item {
+  margin-right: 10px;
+  text-align: center;
+  position: relative;
+}
+.feature-item button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border: 2px solid #3498db; /* Border color */
+  color: #fff; /* Text color */
+  background-color: #3498db; /* Background color */
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+.feature-item :hover {
+  background-color: #ffffff; /* Hover background color */
+  color: #3498db; /* Hover text color */
+}
+.description {
+  margin: 1rem 1rem 20rem 1rem;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  border: 1px solid #858585;
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
+}
 
 /* Sign Up page */
 
-.sign-log-head{
+.sign-log-head {
   width: 100%;
   display: flex;
   justify-content: center;
 }
 
-.sign-log-container{
+.sign-log-container {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -87,38 +162,37 @@ a{
   transform: translateY(-50%);
   padding: 0 5px;
   transition: all 0.2s ease-in-out;
-  
 }
 
 input[type="text"],
 input[type="email"],
 input[type="password"] {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
 
-.container-input{
+.container-input {
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
 
-.container-input:focus-within label{
+.container-input:focus-within label {
   top: 0;
   font-size: 12px;
 }
 
-.sign-log-button{
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+.sign-log-button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 .sign-log-button:hover {
