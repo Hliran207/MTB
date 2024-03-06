@@ -1,9 +1,10 @@
-import NavBar from "./HomePage/components/NavBar";
+
 import { Route, Routes } from "react-router-dom";
 import Hero from "./HomePage/components/hero";
 import LogIn from "./HomePage/components/LogIn";
 import SignUp from "./HomePage/components/SignUp";
 import ChildLPage from "./ChildPage/components/ChildLPage";
+import ParantPage from "./parantpage/ParantPage";
 function App() {
   return (
     <>
@@ -13,6 +14,8 @@ function App() {
           <Route path="/LogIn" element={<LogIn />}></Route>
           <Route path="/SignUp" element={<SignUp />}></Route>
           <Route path="/ChildPage" element={<ChildLPage />}></Route>
+          <Route path="/ParantPage" element={<ParantPage />}></Route>
+
         </Routes>
       </div>
     </>

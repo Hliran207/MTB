@@ -289,3 +289,9 @@ input[type="password"] {
   font-size: 1.1rem;
   text-align: center;
 }
+
+.home-page-parant {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
