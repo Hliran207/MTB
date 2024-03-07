@@ -1,0 +1,37 @@
+body {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background-color: #f0f8ff;
+  text-align: center;
+}
+
+h1 {
+  color: #4169e1;
+  font-size: 3rem;
+  margin-top: 2rem;
+}
+
+.instructions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.instructions p {
+  font-size: 2rem;
+  margin: 1rem;
+}
+
+.inhale {
+  color: #008000;
+  font-weight: bold;
+}
+
+.exhale {
+  color: #ff0000;
+  font-size: 4rem;
+}
+
+.timer {
+  color: #800080;
+  font-size: 4rem;
+}

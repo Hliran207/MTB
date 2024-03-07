@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 // Tab.jsx
 
 function TabChildPage({ tab }) {
