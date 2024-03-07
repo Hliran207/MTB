@@ -1,37 +1,63 @@
 body {
-  font-family: 'Comic Sans MS', cursive, sans-serif;
-  background-color: #f0f8ff;
-  text-align: center;
-}
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-color: #f0f8ff;
+    text-align: center;
+  }
 
-h1 {
-  color: #4169e1;
-  font-size: 3rem;
-  margin-top: 2rem;
-}
+  h1 {
+    color: #4169e1;
+    font-size: 3rem;
+    margin-top: 2rem;
+  }
 
-.instructions {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+  .instructions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-.instructions p {
-  font-size: 2rem;
-  margin: 1rem;
-}
+  .instructions p {
+    font-size: 2rem;
+    margin: 1rem;
+  }
 
-.inhale {
-  color: #008000;
-  font-weight: bold;
-}
+  .inhale {
+    color: #008000;
+    font-weight: bold;
+  }
 
-.exhale {
-  color: #ff0000;
-  font-size: 4rem;
-}
+  .exhale {
+    color: #ff0000;
+    font-size: 4rem;
+  }
 
-.timer {
-  color: #800080;
-  font-size: 4rem;
-}
+  .timer {
+    color: #fe00cf;
+    font-size: 100rem;
+  }
+  .clock {
+    font-family: Arial, sans-serif;
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+  }
+  
+  .button:hover {
+    background-color: #45a049;
+  }
+  
