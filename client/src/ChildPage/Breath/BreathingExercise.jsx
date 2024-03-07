@@ -6,7 +6,7 @@ const BreathingExercise = () => {
   const [time, setTime] = useState(5);
   const [inhale, setInhale] = useState(true);
   const [intervalId, setIntervalId] = useState(null);
-  const [totalTime, setTotalTime] = useState(60);
+  const [totalTime, setTotalTime] = useState(120);
   const [, setIsRestarted] = useState(false);
   const [showRestartButton, setShowRestartButton] = useState(false);
   const [showCongratulations, setShowCongratulations] = useState(false);
@@ -79,19 +79,19 @@ const BreathingExercise = () => {
       {!started && <button onClick={() => setStarted(true)}>התחלה</button>}
       {started && (
         <>
-          <p>{inhale ? 'לשאוף' : 'לנשוף'}</p>
-          <p>{time}</p>
-          <p>זמן נותר: {Math.floor(totalTime / 60)}:{(totalTime % 60).toString().padStart(2, '0')}</p>
-          {showCongratulations && <div>כל הכבוד! סיימנו את הנשימות המרגיעות</div>}
+          <h1 className="breath-text">{inhale ? 'שואף' : 'נושף'}</h1>
+          <div className="clock">{time}</div>
+          <p className='remainingTime'>זמן נותר: {Math.floor(totalTime / 60)}:{(totalTime % 60).toString().padStart(2, '0')}</p>
+          {showCongratulations && <div className='remainingTime'>כל הכבוד! סיימנו את הנשימות המרגיעות</div>}
           {showRestartButton && <button onClick={restartExercise}>התחל מחדש</button>}
           {showFeedback && (
             <div>
-              <p>האם תרגיל הנשימות עזר לך להרגע?</p>
+              <p className='remainingTime'>האם תרגיל הנשימות עזר לך להרגע?</p>
               <button onClick={handleYes}>כן</button>
               <button onClick={handleNo}>לא</button>
             </div>
           )}
-          {feedback && <p>תודה על המשוב: {feedback}</p>}
+          {feedback && <p className='remainingTime'>תודה על המשוב: {feedback}</p>}
         </>
       )}
     </div>

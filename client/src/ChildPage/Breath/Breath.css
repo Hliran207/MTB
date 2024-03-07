@@ -1,63 +1,49 @@
-body {
-    font-family: 'Comic Sans MS', cursive, sans-serif;
-    background-color: #f0f8ff;
-    text-align: center;
-  }
+/* Breath.css */
 
-  h1 {
-    color: #4169e1;
-    font-size: 3rem;
-    margin-top: 2rem;
-  }
+.container {
+  text-align: center;
+}
 
-  .instructions {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+.clock {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 10px solid #333;
+  display: inline-block;
+  font-size: 50px;
+  line-height: 200px;
+  color: #333;
+}
 
-  .instructions p {
-    font-size: 2rem;
-    margin: 1rem;
-  }
+.buttons {
+  margin-top: 20px;
+}
 
-  .inhale {
-    color: #008000;
-    font-weight: bold;
-  }
+button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: rgb(0, 0, 0);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
 
-  .exhale {
-    color: #ff0000;
-    font-size: 4rem;
-  }
-
-  .timer {
-    color: #fe00cf;
-    font-size: 100rem;
-  }
-  .clock {
-    font-family: Arial, sans-serif;
-    font-size: 3rem;
-    text-align: center;
-    margin-bottom: 20px;
-    color: #333;
-  }
-  
-  .button {
-    background-color: #4CAF50;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 12px;
-  }
-  
-  .button:hover {
-    background-color: #45a049;
-  }
-  
+button:hover {
+  background-color: #45a049;
+}
+.breath-text {
+  font-size: 36px;
+  font-weight: bold;
+}
+.remainingTime {
+  background-color: white; /* רקע לבן */
+  padding: 20px;
+  margin-top: 10px;
+  font-size: 24px; /* גודל הכיתוב */
+  font-weight: bold; /* משקל לכיתוב */
+}
