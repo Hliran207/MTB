@@ -1,7 +1,16 @@
 import NavBar from "./NavBar";
+import { useState } from "react";
+import axios from 'axios';
+
 export default function LogIn() {
+  const [data, setData] = useState({
+    email: '',
+    password: '',
+  })
+
   const logInUser = (e) => {
     e.preventDefault();
+    axios.get('/');
   };
 
   return (
@@ -13,17 +22,21 @@ export default function LogIn() {
           <div className="container-input">
             <label className="sign-log-lable">Email</label>
             <input
+              className="sign-log-lable"
               type="Email"
               placeholder="Enter Email..."
-              className="sign-log-lable"
+              value={data.email}
+              onChange={(e)=> setData({...data, email:e.target.value})}
             />
           </div>
           <div className="container-input">
             <label className="sign-log-lable">Password</label>
             <input
+              className="sign-log-lable"
               type="password"
               placeholder="Enter Password..."
-              className="sign-log-lable"
+              value={data.password}
+              onChange={(e)=> setData({...data, password:e.target.value})}
             />
           </div>
           <button className="sign-log-button" type="submit">
