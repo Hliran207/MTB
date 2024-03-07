@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
-import musicFile1 from "./music1.mp3"; // Import the music file
-import musicFile2 from "./music2.mp3"; // Import the music file
-import musicFile3 from "./music3.mp3"; // Import the music file
-import musicFile4 from "./music4.mp3"; // Import the music file
+import musicFile1 from "./music1.mp3";
+import musicFile2 from "./music2.mp3";
+import musicFile3 from "./music3.mp3";
+import musicFile4 from "./music4.mp3";
 
 const Music = () => {
   const [isPlaying, setIsPlaying] = useState(false);
