@@ -290,6 +290,44 @@ input[type="password"] {
   text-align: center;
 }
 
+.ButtonPlayMusic {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: 140px;
+  right: 80px;
+  background-color: #bff8c8;
+  border: 2px solid black; /* Added black border */
+  border-radius: 100%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center the play icon vertically and horizontally */
+}
+
+.ButtonPlayMusic:hover {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: 140px;
+  right: 80px;
+  background-color: #92ec9f;
+  border: 2px solid black; /* Added black border */
+  border-radius: 100%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center the play icon vertically and horizontally */
+}
+
+.play-icon {
+  width: 30px;
+  height: 30px;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 35px solid white;
+}
+
 .home-page-parant {
   display: flex;
   flex-direction: column;

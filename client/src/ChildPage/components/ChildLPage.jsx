@@ -1,5 +1,6 @@
 import NavBarChildPage from "./NavBarChildPage";
 import TabChildPage from "./TabChildPage";
+import Music from "./Music";
 
 const tabs = [
   { name: "משחק", id: "game" },
@@ -15,6 +16,7 @@ function ChildLPage() {
       <div className="ChildLPage">
         <div className="child-page">
           <NavBarChildPage />
+          <Music></Music>
           <div className="tab-container">
             {tabs.map((tab) => (
               <TabChildPage key={tab.id} tab={tab} />
