@@ -16,8 +16,8 @@ const registerUser = async (req, res) => {
       });
     }
     // check if email was enterd and not exist
-    const existP = await User.findOne({ emailParent });
-    if (existP) {
+    const userObj = await User.findOne({ emailParent });
+    if (userObj) {
       return res.json({
         error: "email is already taken",
       });

@@ -7,10 +7,7 @@ const userParentSchema = new Schema({
     type: String,
     unique: true,
   },
-  emailChild: {
-    type: String,
-    unique: true,
-  },
+  emailChild: String,
   password: String,
 });
 
