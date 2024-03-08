@@ -1,0 +1,10 @@
+.breath {
+    background-image: url('/breath5.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  
+  /* .breath:hover {
+    filter: brightness(1.2) blur(100);
+    backface-visibility: ;
+  } */
