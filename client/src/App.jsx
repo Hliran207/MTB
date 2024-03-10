@@ -5,11 +5,11 @@ import LogIn from "./HomePage/components/LogIn";
 import SignUp from "./HomePage/components/SignUp";
 import ChildLPage from "./ChildPage/components/ChildLPage";
 import ParantPage from "./parantpage/ParantPage";
-import Breath from "./ChildPage/Breath/Breath";
 function App() {
   return (
     <>
       <div className="container">
+        <Toaster position='bottom-right'toastOptions={{duration: 2000}}/>
         <Routes>
           <Route path="/" element={<Hero />}></Route>
           <Route path="/LogIn" element={<LogIn />}></Route>

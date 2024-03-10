@@ -1,30 +1,72 @@
 import NavBar from "./NavBar";
+import { useState } from "react";
+import axios from 'axios';
+import {toast} from 'react-hot-toast';
+import {useNavigate} from 'react-router-dom';
+
 
 export default function SignUp() {
-  const signUpUser = (e) => {
-    e.preventDefault();
-  };
+  const navigate = useNavigate()
+  const [data , setData] = useState({
+      name: '',
+      emailParent: '',
+      emailChild: '',
+      password: '',
+  })
 
+  const signUpUser = async (e) => {
+    e.preventDefault();
+    const {name, emailParent, emailChild, password} = data;
+    try {
+      const {data} = await axios.post("/SignUp", {
+        name, emailParent, emailChild, password
+      })
+      if (data.error) {
+        toast.error(data.error)
+      }else{
+        setData({})
+        toast.success('Sign Up Parent Successful!')
+        navigate('/')
+      }
+    } catch (error) {
+      console.log(error);
+    }
+
+  };
   return (
     <>
       <NavBar />
-      <h1 className="sign-log-head">SIGN UP</h1>
+      <h1 className="sign-log-head">SIGN UP PARENT</h1>
       <div className="sign-log-container">
         <form className="sign-log-form" onSubmit={signUpUser}>
           <div className="container-input">
             <label className="sign-log-lable">Name</label>
             <input
+              className="sign-log-lable"
               type="text"
               placeholder="Enter Name..."
-              className="sign-log-lable"
+              value={data.name}
+              onChange={(e) => setData({...data, name:e.target.value})}
             />
           </div>
           <div className="container-input">
-            <label className="sign-log-lable">Email</label>
+            <label className="sign-log-lable">Email Parent</label>
             <input
               type="Email"
               placeholder="Enter Email..."
               className="sign-log-lable"
+              value={data.emailParent}
+              onChange={(e) => setData({...data, emailParent:e.target.value})}
+            />
+          </div>
+          <div className="container-input">
+            <label className="sign-log-lable">Email Child</label>
+            <input
+              type="Email"
+              placeholder="Enter Child Email..."
+              className="sign-log-lable"
+              value={data.emailChild}
+              onChange={(e) => setData({...data, emailChild:e.target.value})}
             />
           </div>
           <div className="container-input">
@@ -33,9 +75,11 @@ export default function SignUp() {
               type="password"
               placeholder="Enter Password..."
               className="sign-log-lable"
+              value={data.password}
+              onChange={(e) => setData({...data, password:e.target.value})}
             />
           </div>
-          <button className="sign-log-button" type="submit">
+          <button className="sign-log-button" type="submit" >
             Submit
           </button>
         </form>
