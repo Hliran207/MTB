@@ -6,7 +6,7 @@ const tabs = [
   { name: "משחק", id: "game" },
   { name: "שליחת חיזוק", id: "send_affirmitive" },
   { name: "סיפורים מרגיעים", id: "stories" },
-  { name: "תרגילי נשימות", id: "breath" },
+  { name: "", id: "breath" },
   // { name: "נוסף", id: "add" },
 ];
 

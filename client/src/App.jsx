@@ -5,6 +5,7 @@ import LogIn from "./HomePage/components/LogIn";
 import SignUp from "./HomePage/components/SignUp";
 import ChildLPage from "./ChildPage/components/ChildLPage";
 import ParantPage from "./parantpage/ParantPage";
+import Breath from "./ChildPage/Breath/Breath";
 function App() {
   return (
     <>
@@ -15,7 +16,7 @@ function App() {
           <Route path="/SignUp" element={<SignUp />}></Route>
           <Route path="/ChildPage" element={<ChildLPage />}></Route>
           <Route path="/ParantPage" element={<ParantPage />}></Route>
-
+          <Route path="/Breath" element={<Breath />}></Route>
         </Routes>
       </div>
     </>
