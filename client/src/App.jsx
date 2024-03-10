@@ -5,6 +5,13 @@ import LogIn from "./HomePage/components/LogIn";
 import SignUp from "./HomePage/components/SignUp";
 import ChildLPage from "./ChildPage/components/ChildLPage";
 import ParantPage from "./parantpage/ParantPage";
+import { Toaster } from "react-hot-toast";
+import Breath from "./ChildPage/Breath/Breath"
+import axios from "axios";
+
+axios.defaults.baseURL = 'http://localhost:8000'
+axios.defaults.withCredentials = true;
+
 function App() {
   return (
     <>
