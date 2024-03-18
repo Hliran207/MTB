@@ -11,7 +11,8 @@ mongoose.connect(process.env.MONGO_URL)
 
 //middle
 app.use(express.json())
-
+const reviewRoutes = require('./routes/reviews');
+app.use('/api/reviews', reviewRoutes);
 app.use('/', require('./routes/authRoutes'));
 
 const port = 8000;
