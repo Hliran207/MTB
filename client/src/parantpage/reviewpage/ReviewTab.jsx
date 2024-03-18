@@ -5,7 +5,7 @@ const ReviewTab = () => {
   };
 
   return (
-    <div className="tab-container-item" onClick={handleReviewClick}>
+    <div className="tab-container-item " onClick={handleReviewClick}>
       הוספת ביקורת לאתר
     </div>
   );
