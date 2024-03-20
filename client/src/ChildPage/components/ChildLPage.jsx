@@ -1,8 +1,9 @@
 import NavBarChildPage from "./NavBarChildPage";
 import TabChildPage from "./TabChildPage";
+import Game from "./Game";
 
 const tabs = [
-  { name: "משחק", id: "game" },
+  { name: "משחק", id: "Game" },
   { name: "שליחת חיזוק", id: "send_affirmitive" },
   { name: "סיפורים מרגיעים", id: "stories" },
   { name: "תרגילי נשימות", id: "breath" },
