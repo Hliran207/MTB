@@ -5,39 +5,40 @@ import {toast} from 'react-hot-toast';
 import {useNavigate} from 'react-router-dom';
 
 
-export default function SignUp() {
+export default function SignUp_child() {
   const navigate = useNavigate()
   const [data , setData] = useState({
       name: '',
-      emailParent: '',
       emailChild: '',
+      emailParent: '',
       password: '',
-      is_parent: true
+      is_child: true
   })
 
   const signUpUser = async (e) => {
     e.preventDefault();
-    const {name, emailParent, emailChild, password, is_parent} = data;
+    const {name, emailChild, emailParent, password, is_child} = data;
     try {
-      const {data} = await axios.post("/SignUp", {
-        name, emailParent, emailChild, password, is_parent
+      const {data} = await axios.post("/SignUpChild", {
+        name, emailChild, emailParent, password, is_child
       })
       if (data.error) {
         toast.error(data.error)
       }else{
         setData({})
-        toast.success('Sign Up Parent Successful!')
-        navigate('/SignUpChild')
+        toast.success('Sign Up Child Successful!')
+        navigate('/')
       }
     } catch (error) {
       console.log(error);
     }
 
   };
+
   return (
     <>
       <NavBar />
-      <h1 className="sign-log-head">SIGN UP PARENT</h1>
+      <h1 className="sign-log-head">SIGN UP CHILD</h1>
       <div className="sign-log-container">
         <form className="sign-log-form" onSubmit={signUpUser}>
           <div className="container-input">
@@ -51,16 +52,6 @@ export default function SignUp() {
             />
           </div>
           <div className="container-input">
-            <label className="sign-log-lable">Email Parent</label>
-            <input
-              type="Email"
-              placeholder="Enter Email..."
-              className="sign-log-lable"
-              value={data.emailParent}
-              onChange={(e) => setData({...data, emailParent:e.target.value})}
-            />
-          </div>
-          <div className="container-input">
             <label className="sign-log-lable">Email Child</label>
             <input
               type="Email"
@@ -68,6 +59,16 @@ export default function SignUp() {
               className="sign-log-lable"
               value={data.emailChild}
               onChange={(e) => setData({...data, emailChild:e.target.value})}
+            />
+          </div>
+          <div className="container-input">
+            <label className="sign-log-lable">Email Parent</label>
+            <input
+              type="Email"
+              placeholder="Enter Parent Email..."
+              className="sign-log-lable"
+              value={data.emailParent}
+              onChange={(e) => setData({...data, emailParent:e.target.value})}
             />
           </div>
           <div className="container-input">
