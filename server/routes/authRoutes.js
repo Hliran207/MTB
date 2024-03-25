@@ -18,6 +18,6 @@ router.use(
 );
 
 router.post("/SignUp", registerUser);
-router.post("/SignUpChild", registerChildUser);
+// router.post("/SignUpChild", registerChildUser);
 router.post("/LogIn", loginUser);
 module.exports = router;

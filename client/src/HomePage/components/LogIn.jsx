@@ -7,23 +7,30 @@ import { useNavigate } from "react-router-dom";
 export default function LogIn() {
   const navigate = useNavigate();
   const [data, setData] = useState({
-    emailParent: "",
+    email: "",
     password: "",
   });
 
   const logInUser = async (e) => {
     e.preventDefault();
-    const { emailParent, password } = data;
+    const { email, password } = data;
+   
     try {
-      const { data } = await axios.post("/LogIn", {
-        emailParent,
+      const result = await axios.post("/LogIn", {
+        email,
         password,
-      });
-      if (data.error) {
-        toast.error(data.error);
+      }).then((res) => res.data);
+      if (result.error) {
+        toast.error(result.error);
       } else {
         setData({});
-        navigate("/parantpage");
+        debugger;
+        if (result.is_parent ===  true) {
+          navigate("/parantpage");
+        }
+        else{
+        navigate("/ChildPage");
+      }
       }
     } catch (error) {}
   };
@@ -40,9 +47,9 @@ export default function LogIn() {
               className="sign-log-lable"
               type="Email"
               placeholder="Enter Email..."
-              value={data.emailParent}
+              value={data.email}
               onChange={(e) =>
-                setData({ ...data, emailParent: e.target.value })
+                setData({ ...data, email: e.target.value })
               }
             />
           </div>

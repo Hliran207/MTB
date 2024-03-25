@@ -2,9 +2,11 @@ const mongoose = require("mongoose");
 const { Schema } = mongoose;
 
 const userChildSchema = new Schema({
-  name: String,
+  child_name:{
+    type: String,
+    required: true
+  },
   emailChild: String,
-  emailParent: String,
   password: String,
   is_child: Boolean,
 });

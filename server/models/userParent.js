@@ -1,14 +1,14 @@
 const mongoose = require("mongoose");
 const { Schema } = mongoose;
 
-const userParentSchema = new Schema({
-  name: String,
+const userSchema = new Schema({
+  parent_name: String,
   emailParent: String,
-  emailChild: String,
+  child_id: String,
   password: String,
   is_parent: Boolean,
 });
 
-const UserModel = mongoose.model("User", userParentSchema);
+const UserModel = mongoose.model("User", userSchema);
 
 module.exports = UserModel;
