@@ -1,13 +1,13 @@
 import NavBarChildPage from "./NavBarChildPage";
 import TabChildPage from "./TabChildPage";
 import Music from "./Music";
+import { Link } from "react-router-dom"; // Import Link component from React Router
 
 const tabs = [
-  { name: "משחק", id: "game" },
-  { name: "שליחת חיזוק", id: "send_affirmitive" },
-  { name: "סיפורים מרגיעים", id: "stories" },
-  { name: "", id: "breath" },
-  // { name: "נוסף", id: "add" },
+  { name: "משחק", id: "Game", address: "/Game" },
+  { name: "שליחת חיזוק", id: "send_affirmitive", address: "/send_affirmitive" },
+  { name: "סיפורים מרגיעים", id: "stories", address: "/stories" },
+  { name: "", id: "breath", address: "/Breath" },
 ];
 
 function ChildLPage() {
@@ -19,7 +19,10 @@ function ChildLPage() {
           <Music></Music>
           <div className="tab-container">
             {tabs.map((tab) => (
-              <TabChildPage key={tab.id} tab={tab} />
+              // Use Link component to create a link to the specified address
+              <Link key={tab.id} to={tab.address}>
+                <TabChildPage tab={tab} />
+              </Link>
             ))}
           </div>
         </div>
