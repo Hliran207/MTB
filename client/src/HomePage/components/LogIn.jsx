@@ -23,10 +23,8 @@ export default function LogIn() {
         toast.error(result.error);
       } else {
         setData({});
-        if (result.emailParent === "admin@gmail.com") {
-          navigate("/AdminPage");
-        }
-        else if (result.is_parent ===  true) {
+        debugger;
+        if (result.is_parent ===  true) {
           navigate("/parantpage");
         }
         else{

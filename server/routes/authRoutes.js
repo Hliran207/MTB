@@ -1,15 +1,10 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
 const cors = require("cors");
-const {
-  test,
-  registerUser,
-  registerChildUser,
-  loginUser,
-} = require("../controllers/authcontroller");
+const { registerUser, loginUser } = require("../controllers/authcontroller");
 const reviewRoutes = require("./reviews");
 
-//middelware
+//middleware
 router.use(
   cors({
     credentials: true,
@@ -17,9 +12,8 @@ router.use(
   })
 );
 
-router.post("/SignUp", registerUser);
-// router.post("/SignUpChild", registerChildUser);
-router.post("/LogIn", loginUser);
+router.post("/SignUp", (req, res) => registerUser(req, res));
+router.post("/LogIn", (req, res) => loginUser(req, res));
 router.use("/reviews", reviewRoutes);
 
 module.exports = router;
