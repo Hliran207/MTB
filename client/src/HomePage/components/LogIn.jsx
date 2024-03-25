@@ -14,7 +14,6 @@ export default function LogIn() {
   const logInUser = async (e) => {
     e.preventDefault();
     const { email, password } = data;
-   
     try {
       const result = await axios.post("/LogIn", {
         email,
@@ -24,8 +23,10 @@ export default function LogIn() {
         toast.error(result.error);
       } else {
         setData({});
-        debugger;
-        if (result.is_parent ===  true) {
+        if (result.emailParent === "admin@gmail.com") {
+          navigate("/");
+        }
+        else if (result.is_parent ===  true) {
           navigate("/parantpage");
         }
         else{

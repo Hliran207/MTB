@@ -239,6 +239,11 @@ input[type="password"] {
   padding: 0.5rem;
 }
 
+.NavBarChildPage-button:hover {
+  background-color: #bbf4dd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
 .NavBarChildPage-title {
   flex: 1;
   display: flex;

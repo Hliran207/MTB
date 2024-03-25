@@ -93,7 +93,7 @@ const loginUser = async (req, res) => {
   let user = null;
   try {
     const { email, password } = req.body;
-
+    debugger;
     //check if user exist
     user = await User.findOne({emailParent: email,password});
     if (!user) {

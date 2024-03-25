@@ -4,7 +4,7 @@ import React from 'react';
 const NavbarParent = () => {
   return (
     <header className="NavBarChildPage">
-      <button className="NavBarChildPage-button">התנתקות</button>
+      <button className="NavBarChildPage-button" onClick={() => { window.location.href = '/'; }}>התנתקות</button>
       <div className="NavBarChildPage-title">MTB-הורה</div>
       <button
         className="NavBarChildPage-button home-button"
