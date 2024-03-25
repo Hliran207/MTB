@@ -1,7 +1,7 @@
 
 const ReviewTab = () => {
   const handleReviewClick = () => {
-    window.location.replace('/review');
+    window.location.replace('/Review');
   };
 
   return (
