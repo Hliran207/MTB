@@ -24,7 +24,7 @@ export default function LogIn() {
       } else {
         setData({});
         if (result.emailParent === "admin@gmail.com") {
-          navigate("/");
+          navigate("/AdminPage");
         }
         else if (result.is_parent ===  true) {
           navigate("/parantpage");
