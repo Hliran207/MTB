@@ -11,8 +11,4 @@ const ReviewSchema = new mongoose.Schema({
   },
 });
 
-<<<<<<< HEAD
 module.exports = mongoose.model('Review', ReviewSchema);
-=======
-module.exports = mongoose.model('Review', ReviewSchema);
->>>>>>> reviewparent
