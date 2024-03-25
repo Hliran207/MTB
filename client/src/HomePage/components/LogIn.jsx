@@ -24,7 +24,7 @@ export default function LogIn() {
         toast.error(result.error);
       } else {
         setData({});
-        debugger;
+        // debugger;
         if (result.is_parent ===  true) {
           navigate("/parantpage");
         }
