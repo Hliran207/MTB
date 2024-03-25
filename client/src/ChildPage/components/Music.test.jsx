@@ -1,11 +1,12 @@
 import React from "react";
 import { render, fireEvent } from "@testing-library/react";
-import { expect, spy } from "vitest";
+import { expect } from "vitest";
 import "@testing-library/jest-dom";
 import Music from "./Music";
 
 describe("Music component", () => {
-  //test1 ensures that the Music component correctly renders the play button with the text content "Play".
+  //test1 ensures that the Music component
+  //correctly renders the play button with the text content "Play".
   test("renders play button", () => {
     const { getByText } = render(<Music />);
     const playButton = getByText("Play");
