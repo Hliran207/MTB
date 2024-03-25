@@ -7,7 +7,7 @@ const tabs = [
   { name: "משחק", id: "Game", address: "/Game" },
   { name: "שליחת חיזוק", id: "send_affirmitive", address: "/send_affirmitive" },
   { name: "סיפורים מרגיעים", id: "stories", address: "/stories" },
-  { name: "", id: "breath", address: "/Breath" },
+  { name: "נשימות", id: "breath", address: "/Breath" },
 ];
 
 function ChildLPage() {

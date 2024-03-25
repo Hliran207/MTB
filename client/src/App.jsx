@@ -9,7 +9,8 @@ import { Toaster } from "react-hot-toast";
 import Breath from "./ChildPage/Breath/Breath";
 import axios from "axios";
 import Game from "./ChildPage/Game/Game";
-import ReviewPage from '../src/parantpage/reviewpage/ReviewPage';
+import ReviewPage from "../src/parantpage/reviewpage/ReviewPage";
+import AdminPage from "./adminpage/AdminPage";
 
 axios.defaults.baseURL = "http://localhost:8000";
 axios.defaults.withCredentials = true;
@@ -26,6 +27,7 @@ function App() {
           {/* <Route path="/SignUpChild" element={<SignUp_child />}></Route> */}
           <Route path="/ChildPage" element={<ChildLPage />}></Route>
           <Route path="/ParantPage" element={<ParantPage />}></Route>
+          <Route path="/AdminPage" element={<AdminPage />}></Route>
           <Route path="/Breath" element={<Breath />}></Route>
           <Route path="/Game" element={<Game />}></Route>
           <Route path="/Review" element={<ReviewPage />}></Route>
