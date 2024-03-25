@@ -1,7 +1,8 @@
-
+import { MdAir } from "react-icons/md";
 import { FaHandsHoldingChild } from "react-icons/fa6";
 import Features_Lpage from "./Features_Lpage";
 import NavBar from "./NavBar";
+import AboutUs from "./AboutUs";
 
 export default function Hero() {
   return (
@@ -19,6 +20,9 @@ export default function Hero() {
       </div>
       <div>
         <Features_Lpage></Features_Lpage>
+      </div>
+      <div>
+        <AboutUs></AboutUs>
       </div>
     </>
   );
