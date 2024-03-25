@@ -1,3 +1,4 @@
+/* eslint-disable no-empty */
 import NavBar from "./NavBar";
 import { useState } from "react";
 import axios from "axios";
@@ -23,8 +24,10 @@ export default function LogIn() {
         toast.error(result.error);
       } else {
         setData({});
-        debugger;
-        if (result.is_parent ===  true) {
+        if (result.emailParent === "admin@gmail.com") {
+          navigate("/AdminPage");
+        }
+        else if (result.is_parent ===  true) {
           navigate("/parantpage");
         }
         else{
