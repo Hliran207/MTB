@@ -8,7 +8,6 @@ import ParantPage from "./parantpage/ParantPage";
 import { Toaster } from "react-hot-toast";
 import Breath from "./ChildPage/Breath/Breath";
 import axios from "axios";
-import Game from "./ChildPage/Game/Game";
 
 axios.defaults.baseURL = "http://localhost:8000";
 axios.defaults.withCredentials = true;
@@ -26,7 +25,6 @@ function App() {
           <Route path="/ChildPage" element={<ChildLPage />}></Route>
           <Route path="/ParantPage" element={<ParantPage />}></Route>
           <Route path="/Breath" element={<Breath />}></Route>
-          <Route path="/Game" element={<Game />}></Route>
         </Routes>
       </div>
     </>
