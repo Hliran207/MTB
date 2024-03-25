@@ -191,17 +191,17 @@ export default function GamePlay() {
         aria-describedby="alert-dialog-description"
       >
         <DialogTitle id="alert-dialog-title">
-          Hurray!!! You completed the challenge
+          "כל הכבוד סיימת את המשחק!!!"
         </DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog-description">
-            You completed the game in {moves} moves. Your best score is{" "}
-            {bestScore} moves.
+             סיימת את המשחק ב {moves} צעדים. השיא שלך הוא{" "}
+            {bestScore} צעדים.
           </DialogContentText>
         </DialogContent>
         <DialogActions>
           <Button onClick={handleRestart} color="primary">
-            Restart
+            התחל מחדש
           </Button>
         </DialogActions>
       </Dialog>
