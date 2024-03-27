@@ -38,7 +38,7 @@ export default function SignUp() {
   return (
     <>
       <NavBar />
-      <h1 className="sign-log-head">SIGN UP PARENT</h1>
+      <h1 className="sign-log-head">SIGN UP PARENT AND CHILD</h1>
       <div className="sign-log-container">
         <form className="sign-log-form" onSubmit={signUpUser}>
           <div className="container-input">

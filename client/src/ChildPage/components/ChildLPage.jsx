@@ -1,7 +1,8 @@
+import React, { useState, useEffect } from 'react';
 import NavBarChildPage from "./NavBarChildPage";
 import TabChildPage from "./TabChildPage";
 import Music from "./Music";
-import { Link } from "react-router-dom"; // Import Link component from React Router
+import { Link } from "react-router-dom";
 
 const tabs = [
   { name: "משחק", id: "Game", address: "/Game" },
@@ -11,6 +12,16 @@ const tabs = [
 ];
 
 function ChildLPage() {
+//   const [showPopup, setShowPopup] = useState(false);
+
+//   useEffect(() => {
+//     setShowPopup(true);
+//   }, []);
+
+//   const handleClosePopup = () => {
+//     setShowPopup(false);
+//   };
+
   return (
     <section className="backgroundChildPage">
       <div className="ChildLPage">
@@ -19,7 +30,6 @@ function ChildLPage() {
           <Music></Music>
           <div className="tab-container">
             {tabs.map((tab) => (
-              // Use Link component to create a link to the specified address
               <Link key={tab.id} to={tab.address}>
                 <TabChildPage tab={tab} />
               </Link>
@@ -27,6 +37,16 @@ function ChildLPage() {
           </div>
         </div>
       </div>
+      {/* {showPopup && (
+        <div className="popup">
+          <div className="popup-content">
+            <span className="close-button" onClick={handleClosePopup}>
+              &times;
+            </span>
+            <p>אתה לא לבד צוות האתר ביחד איתך לכל אורך הדרך</p>
+          </div>
+        </div>
+      )} */}
     </section>
   );
 }

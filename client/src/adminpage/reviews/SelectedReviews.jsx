@@ -2,13 +2,16 @@ import React from 'react';
 
 const SelectedReviews = ({ reviews }) => {
   return (
-    <div>
-      <h2>ביקורות נבחרות :</h2>
+    <div className="selected-reviews-container">
+      <h3>ביקורות נבחרות :</h3>
       {reviews.map((review) => (
-        <p key={review._id}>{review.review}</p>
+        <div className="selected-review-box" key={review._id}>
+          <p>{review.review}</p>
+        </div>
       ))}
     </div>
   );
 };
 
 export default SelectedReviews;
+
