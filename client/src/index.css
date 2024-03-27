@@ -590,3 +590,116 @@ input[type="password"] {
   text-align: center; /* Center text horizontally */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a shadow for depth */
 }
+
+.advices {
+  position: relative;
+  margin: 50px auto 20px; /* Added margin to create space between navbar and box, and reduced margin at the bottom */
+  padding: 20px;
+  background-color: #f8f9fa;
+  border: 1px solid #ced4da;
+  border-radius: 10px;
+  max-width: 800px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* Change font family */
+}
+
+.advices h1 {
+  font-size: 28px; /* Increase font size */
+  margin-bottom: 20px;
+  font-weight: bold; /* Add font weight */
+}
+
+.advices-list {
+  display: grid;
+  grid-gap: 20px;
+}
+
+.advice-item {
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 8px;
+  border: 1px solid #ced4da;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 18px; /* Increase font size */
+}
+.add-advice-button {
+  button {
+    padding: 10px 20px;
+    margin: 50px 20px; /* Adjust the margin here to create more space */
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    background-color: #89ee8b;
+    color: white;
+  }
+}
+.add-advice-button:hover {
+  button {
+    padding: 10px 20px;
+    margin: 50px 20px; /* Adjust the margin here to create more space */
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    background-color: #3caa3e;
+    color: white;
+  }
+}
+.add-advice-container {
+  margin-top: 20px;
+}
+
+.add-advice-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.advice-textarea {
+  width: 100%;
+  height: 150px;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: none; /* Prevent resizing */
+  text-align: right; /* Align text to the right */
+}
+
+.add-button {
+  padding: 10px 20px;
+  background-color: #9fefa1;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.success-message {
+  color: green;
+  font-weight: bold;
+}
+.advices-list {
+  margin-top: 20px; /* Add some space between the heading and the list */
+}
+
+.advice-item {
+  position: relative; /* Set position to relative */
+}
+
+.remove-advice-button {
+  position: absolute;
+  bottom: 2px; /* Increase the bottom margin */
+  left: 4%;
+  transform: translateX(-50%);
+  background-color: #f68080;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+/* Remove the hover effect */
+.remove-advice-button:hover {
+  background-color: #ff0000;
+}

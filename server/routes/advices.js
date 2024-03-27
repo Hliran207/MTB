@@ -1,25 +1,24 @@
 const express = require("express");
 const router = express.Router();
-const Review = require("../models/Review");
+const Advice = require("../models/Advices");
 
 router.get("/", async (req, res) => {
   try {
-    const reviews = await Review.find();
-    res.json(reviews);
+    const advice = await advice.find();
+    res.json(advice);
   } catch (err) {
     res.status(500).json({ message: err.message });
   }
 });
 
-// POST a new review
 router.post("/", async (req, res) => {
-  const review = new Review({
-    review: req.body.review,
+  const advice = new Advice({
+    advice: req.body.advice,
   });
 
   try {
-    const newReview = await review.save();
-    res.status(201).json(newReview);
+    const newAdvice = await advice.save();
+    res.status(201).json(newAdvice);
   } catch (err) {
     res.status(400).json({ message: err.message });
   }
