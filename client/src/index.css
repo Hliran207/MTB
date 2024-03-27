@@ -5,7 +5,7 @@
 
 body {
   margin: 0;
-  background-image: url("./assets/calmKid.jpg");
+  background-image: url("./assets/calmkid.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -64,24 +64,29 @@ a {
 .primary-heading {
   font-size: clamp(2rem, 5vw, 4rem);
   color: #4c4c4c;
-  line-height: 10rem;
   max-width: 600px;
-  margin: 10rem 10rem;
-  margin-left: 30rem;
+  margin: 10rem auto; /* שימו לב שהערך השני הוא 'auto' כדי להבטיח מיקום במרכז */
+  padding: 2rem; /* נוסיף padding כדי להבטיח מרווח מסביב לטקסט */
   backdrop-filter: blur(5px);
   justify-content: center;
   border-radius: 10px;
+  display: flex; /* הוספת פרופרטי display עם ערך flex כדי לאפשר יישום של justify-content */
+  align-items: center; /* ליישום מרכזיות אנכית */
 }
+
 
 .primary-text {
   font-size: clamp(1rem, 3vw, 1.5rem);
   max-width: 500px;
   color: #191919;
-  margin: -10rem 3rem;
-  margin-left: 28rem;
+  margin: -10rem auto 3rem; /* שימו לב שהערך הראשון הוא 'auto' כדי להבטיח מיקום במרכז */
+  padding: 1rem; /* נוסיף padding כדי להבטיח מרווח מסביב לטקסט */
   backdrop-filter: blur(5px);
   border-radius: 10px;
+  display: flex; /* הוספת פרופרטי display עם ערך flex כדי לאפשר יישום של justify-content */
+  justify-content: center; /* ליישום מרכזיות אופקית */
 }
+
 .features-headline {
   display: flex;
   justify-content: center;

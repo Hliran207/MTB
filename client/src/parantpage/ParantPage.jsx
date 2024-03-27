@@ -1,6 +1,5 @@
 import Navbarparant from "./Navbarparant";
 import TabParantPage from "./TabParantPage";
-import ReviewTab from '../parantpage/reviewpage/ReviewTab';
 import { Link } from "react-router-dom"; // Import Link component from React Router
 
 
