@@ -11,6 +11,7 @@ import Game from "./ChildPage/Game/Game";
 import ReviewPage from "../src/parantpage/reviewpage/ReviewPage";
 import AdminPage from "./adminpage/AdminPage";
 import ParentContactList from "./parantpage/ParentContactList/ParentContactList";
+import Advices from "./adminpage/Advice/Advices";
 
 axios.defaults.baseURL = "http://localhost:8000";
 axios.defaults.withCredentials = true;
@@ -31,6 +32,7 @@ function App() {
           <Route path="/Game" element={<Game />}></Route>
           <Route path="/Review" element={<ReviewPage />}></Route>
           <Route path="/Contacts" element={<ParentContactList />}></Route>
+          <Route path="/AdviceEdit" element={<Advices />}></Route>
         </Routes>
       </div>
     </>
