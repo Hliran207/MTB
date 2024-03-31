@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 import NavBarChildPage from "./NavBarChildPage";
 import TabChildPage from "./TabChildPage";
 import Music from "./Music";
@@ -12,15 +12,15 @@ const tabs = [
 ];
 
 function ChildLPage() {
-//   const [showPopup, setShowPopup] = useState(false);
+  //   const [showPopup, setShowPopup] = useState(false);
 
-//   useEffect(() => {
-//     setShowPopup(true);
-//   }, []);
+  //   useEffect(() => {
+  //     setShowPopup(true);
+  //   }, []);
 
-//   const handleClosePopup = () => {
-//     setShowPopup(false);
-//   };
+  //   const handleClosePopup = () => {
+  //     setShowPopup(false);
+  //   };
 
   return (
     <section className="backgroundChildPage">
