@@ -35,6 +35,7 @@ const Hero = () => {
         <Features_Lpage></Features_Lpage>
       </div>
       <SelectedReviews reviews={selectedReviews} />
+      <AboutUs></AboutUs>
     </>
   );
 };

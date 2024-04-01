@@ -30,7 +30,7 @@ export default function AboutUs() {
         </div>
         <div className="our_pics">
           <img src="/liran.jpg" alt="Liran" className="round-image" />
-          <p className="image-name">liran-מצטיין רקטור נשיא ווועד דריקטוריון</p>
+          <p className="image-name">liran</p>
         </div>
       </div>
     </div>
