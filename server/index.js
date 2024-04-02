@@ -7,6 +7,8 @@ const adviceRoutes = require("../server/routes/advices");
 const AdviceModel = require("./models/Advices");
 const ReviewModel = require("./models/Review");
 const Advices = require("./models/Advices");
+const storyRoutes = require("../server/routes/stories");
+const StoryModel = require("./models/story");
 const app = express();
 
 // Database connection
@@ -34,6 +36,7 @@ app.use(
 app.use(express.json());
 app.use("/api/reviews", reviewRoutes);
 app.use("/api/advice", adviceRoutes);
+app.use("/api/stories", storyRoutes);
 app.use("/", require("./routes/authRoutes"));
 
 app.delete("/deleteAdvice/:id", (req, res) => {
@@ -55,15 +58,26 @@ app.get("/api/reviews", (req, res) => {
     .catch((err) => res.status(500).json({ error: err.message }));
 });
 
-app.get('/api/reviews/selected', async (req, res) => {
+app.get("/api/reviews/selected", async (req, res) => {
   try {
     // Find all reviews that are selected in the database
     const selectedReviews = await ReviewModel.find({ selected: true });
     res.json(selectedReviews); // Send the selected reviews as the response
   } catch (error) {
     console.error(error);
-    res.status(500).json({ error: 'Server Error' }); // In case of error, send a 500 error
+    res.status(500).json({ error: "Server Error" }); // In case of error, send a 500 error
   }
+});
+app.get("/", (req, res) => {
+  StoryModel.find({})
+    .then((story) => res.json(story))
+    .catch((err) => res.status(500).json({ error: err.message }));
+});
+app.delete("/deleteStory/:id", (req, res) => {
+  const id = req.params.id;
+  StoryModel.findByIdAndDelete(id)
+    .then(() => res.json({ message: "Story deleted successfully" }))
+    .catch((err) => res.status(500).json({ error: err.message }));
 });
 
 const port = 8000;

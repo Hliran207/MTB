@@ -1,24 +1,24 @@
 const express = require("express");
 const router = express.Router();
-const Advice = require("../models/Advices");
+const Story = require("../models/story");
 
 router.get("/", async (req, res) => {
   try {
-    const advice = await Advice.find();
-    res.json(advice);
+    const story = await Story.find();
+    res.json(story);
   } catch (err) {
     res.status(500).json({ message: err.message });
   }
 });
 
 router.post("/", async (req, res) => {
-  const advice = new Advice({
-    advice: req.body.advice,
+  const story = new Story({
+    story: req.body.story,
   });
 
   try {
-    const newAdvice = await advice.save();
-    res.status(201).json(newAdvice);
+    const newStory = await story.save();
+    res.status(201).json(newStory);
   } catch (err) {
     res.status(400).json({ message: err.message });
   }
