@@ -23,6 +23,7 @@ const Gamecard = ({
             "is-inactive": isInactive,
           })}
           onClick={handleClick}
+          data-testid="game-card" // Add data-testid attribute here
         >
           <div className="card-face card-font-face">
             {isFlipped ? (

@@ -24,13 +24,17 @@ function Story() {
   };
 
   return (
-    <div>
+    <div data-testid="story-component">
       <NavbarChildPage />
       <div className="stories">
         <h1>:מאגר סיפורים</h1>
         <div className="stories-list">
           {displayStories.map((story) => (
-            <div key={story._id} className="story-item">
+            <div
+              key={story._id}
+              data-testid={`story-${story.id}`}
+              className="story-item"
+            >
               <p>{story.story}</p>
             </div>
           ))}

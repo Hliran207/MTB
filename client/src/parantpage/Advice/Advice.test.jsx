@@ -1,14 +1,14 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
 // Advice.test.jsx
-import { render, screen } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
-import Advice from './Advice';
+import { render, screen } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
+import Advice from "./Advice";
 
 // Mock data
 const mockAdvices = [
-  { _id: 1, advice: 'Advice 1' },
-  { _id: 2, advice: 'Advice 2' },
+  { _id: 1, advice: "Advice 1" },
+  { _id: 2, advice: "Advice 2" },
 ];
 
 // Mock Advice component to use the mock data
@@ -28,7 +28,7 @@ const MockAdvice = () => {
   );
 };
 
-test('should render the advice list', () => {
+test("should render the advice list", () => {
   render(<MockAdvice />);
 
   const adviceElements = screen.getAllByText(/Advice \d/);

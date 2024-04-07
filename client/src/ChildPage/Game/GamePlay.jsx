@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import GameCards from "./GameCards";
 import emoji1 from "../gamepics/emoji1.webp";
 import emoji2 from "../gamepics/emoji2.png";
@@ -63,18 +63,22 @@ export default function GamePlay() {
   const [shouldDisableAllCards, setShouldDisableAllCards] = useState(false);
   const [moves, setMoves] = useState(0);
   const [showModal, setShowModal] = useState(false);
-  const [bestScore, setBestScore] = useState(
-    JSON.parse(localStorage.getItem("bestScore")) || Number.POSITIVE_INFINITY
-  );
+  const [bestScore, setBestScore] = useState(() => {
+    const storedBestScore = localStorage.getItem("bestScore");
+    return storedBestScore
+      ? JSON.parse(storedBestScore)
+      : Number.POSITIVE_INFINITY;
+  });
   const timeout = useRef(null);
-
+  //Function to disable all cards.
   const disable = () => {
     setShouldDisableAllCards(true);
   };
+  //Function to enable all cards.
   const enable = () => {
     setShouldDisableAllCards(false);
   };
-
+  //Function to check if the game has been completed.
   const checkCompletion = () => {
     if (Object.keys(clearedCards).length === uniqueCardsArray.length) {
       setShowModal(true);
@@ -83,7 +87,7 @@ export default function GamePlay() {
       localStorage.setItem("bestScore", highScore);
     }
   };
-
+  //Function to evaluate the correctness of the selected cards.
   const evaluate = () => {
     const [first, second] = openCards;
     enable();
@@ -97,7 +101,7 @@ export default function GamePlay() {
       setOpenCards([]);
     }, 500);
   };
-
+  //Function to handle click events on cards.
   const handleCardClick = (index) => {
     if (openCards.length === 1) {
       setOpenCards((prev) => [...prev, index]);
@@ -122,14 +126,15 @@ export default function GamePlay() {
   useEffect(() => {
     checkCompletion();
   }, [clearedCards]);
+  // Function to check if a card at a given index is flipped.
   const checkIsFlipped = (index) => {
     return openCards.includes(index);
   };
-
+  //Function to check if a card is inactive (already cleared).
   const checkIsInactive = (card) => {
     return Boolean(clearedCards[card.type]);
   };
-
+  //Function to handle restarting the game.
   const handleRestart = () => {
     setClearedCards({});
     setOpenCards([]);
@@ -195,8 +200,7 @@ export default function GamePlay() {
         </DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog-description">
-             סיימת את המשחק ב {moves} צעדים. השיא שלך הוא{" "}
-            {bestScore} צעדים.
+            סיימת את המשחק ב {moves} צעדים. השיא שלך הוא {bestScore} צעדים.
           </DialogContentText>
         </DialogContent>
         <DialogActions>
