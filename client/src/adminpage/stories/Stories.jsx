@@ -46,6 +46,7 @@ function Stories() {
               <button
                 className="remove-story-button"
                 onClick={(e) => handleRemoveStory(story._id)}
+                data-testid={`remove-button-${story._id}`} // Assign unique test id
               >
                 הסר
               </button>
