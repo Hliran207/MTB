@@ -14,10 +14,23 @@ describe('SignUp', () => {
       </MemoryRouter>  
     )
     
-    expect(screen.getByText('SIGN UP PARENT')).toBeInTheDocument()
-    expect(screen.getByPlaceholderText('Enter Name...')).toBeInTheDocument()
+    expect(screen.getByText('SIGN UP PARENT AND CHILD')).toBeInTheDocument()
+    expect(screen.getByPlaceholderText('Enter Child Name...')).toBeInTheDocument()
     
   })
+
+  test('renders signup form name parent', () => {
+    render(
+      <MemoryRouter>
+        <SignUp />
+      </MemoryRouter>  
+    )
+    
+    expect(screen.getByText('SIGN UP PARENT AND CHILD')).toBeInTheDocument()
+    expect(screen.getByPlaceholderText('Enter Parent Name...')).toBeInTheDocument()
+    
+  })
+
 
   //AI tests 
   test('renders signup form Email Parent', () => {
@@ -27,7 +40,7 @@ describe('SignUp', () => {
       </MemoryRouter>  
     )
     
-    expect(screen.getByText('SIGN UP PARENT')).toBeInTheDocument()
+    expect(screen.getByText('SIGN UP PARENT AND CHILD')).toBeInTheDocument()
     expect(screen.getByPlaceholderText('Enter Email...')).toBeInTheDocument()
     
   })
@@ -39,7 +52,7 @@ describe('SignUp', () => {
       </MemoryRouter>  
     )
     
-    expect(screen.getByText('SIGN UP PARENT')).toBeInTheDocument()
+    expect(screen.getByText('SIGN UP PARENT AND CHILD')).toBeInTheDocument()
     expect(screen.getByPlaceholderText('Enter Child Email...')).toBeInTheDocument()
     // ... test for other form fields
   })
@@ -51,7 +64,7 @@ describe('SignUp', () => {
       </MemoryRouter>  
     )
     
-    expect(screen.getByText('SIGN UP PARENT')).toBeInTheDocument()
+    expect(screen.getByText('SIGN UP PARENT AND CHILD')).toBeInTheDocument()
     expect(screen.getByPlaceholderText('Enter Password...')).toBeInTheDocument()
     // ... test for other form fields
   })

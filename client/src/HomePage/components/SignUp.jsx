@@ -46,7 +46,7 @@ export default function SignUp() {
             <input
               className="sign-log-lable"
               type="text"
-              placeholder="Enter Name..."
+              placeholder="Enter Parent Name..."
               value={data.parent_name}
               onChange={(e) => setData({...data, parent_name:e.target.value})}
             />
@@ -56,7 +56,7 @@ export default function SignUp() {
             <input
               className="sign-log-lable"
               type="text"
-              placeholder="Enter Name..."
+              placeholder="Enter Child Name..."
               value={data.child_name}
               onChange={(e) => setData({...data, child_name:e.target.value})}
             />

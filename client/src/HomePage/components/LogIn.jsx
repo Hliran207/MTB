@@ -1,4 +1,4 @@
-/* eslint-disable no-empty */
+
 import NavBar from "./NavBar";
 import { useState } from "react";
 import axios from "axios";
