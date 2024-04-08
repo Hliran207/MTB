@@ -2,7 +2,6 @@
 /* eslint-disable no-undef */
 // Advice.test.jsx
 import { render, screen } from "@testing-library/react";
-import userEvent from "@testing-library/user-event";
 import Advice from "./Advice";
 
 // Mock data
