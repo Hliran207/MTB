@@ -131,7 +131,7 @@ a {
   justify-content: center;
   text-align: center;
   border: 1px solid #858585;
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(8px);
   border-radius: 10px;
 }
 

@@ -2,9 +2,7 @@ import Navbaradmin from "./Navbaradmin";
 import { Link } from "react-router-dom"; // Import Link component from React Router
 import TabAdminPage from "./TabAdminPage";
 
-
 const tabs = [
-  { name: "קבלת דוחות שימוש", id: "Usagereports", address: "/Usagereports" },
   { name: "עריכת סיפורי ילד", id: "StoriesEdit", address: "/StoriesEdit" },
   { name: "עריכת מאגר עצות", id: "AdviceEdit", address: "/AdviceEdit" },
   {
