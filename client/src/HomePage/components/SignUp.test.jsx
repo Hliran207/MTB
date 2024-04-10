@@ -54,7 +54,7 @@ describe('SignUp', () => {
     
     expect(screen.getByText('SIGN UP PARENT AND CHILD')).toBeInTheDocument()
     expect(screen.getByPlaceholderText('Enter Child Email...')).toBeInTheDocument()
-    // ... test for other form fields
+    
   })
   
   test('renders signup form Password', () => {
@@ -66,7 +66,7 @@ describe('SignUp', () => {
     
     expect(screen.getByText('SIGN UP PARENT AND CHILD')).toBeInTheDocument()
     expect(screen.getByPlaceholderText('Enter Password...')).toBeInTheDocument()
-    // ... test for other form fields
+    
   })
   
 })

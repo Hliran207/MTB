@@ -18,7 +18,7 @@ describe("Stories component", () => {
     expect(getByText(":מאגר סיפורים")).toBeTruthy();
   });
 
-  // Test that the add advice form is rendered correctly
+  // Test that the add story form is rendered correctly
   test("renders add story form", () => {
     const { getByPlaceholderText, getByText } = render(<AddStory />);
     const textarea = getByPlaceholderText("הכנס סיפור חדש");
@@ -33,10 +33,10 @@ describe("Stories component", () => {
     const mockStories = [{ _id: "1", story: "Story 1" }];
     vi.spyOn(axios, "get").mockResolvedValue({ data: mockStories });
 
-    // Render the Advices component
+    // Render the stroies component
     const { getByText } = render(<Stories />);
 
-    // Wait for the advice items to be rendered
+    // Wait for the story items to be rendered
     await waitFor(() => getByText("Story 1"));
 
     // Check that the remove button is present
@@ -44,7 +44,7 @@ describe("Stories component", () => {
     expect(removeButton).toBeTruthy();
   });
 
-  // Test that the advice content is rendered correctly
+  // Test that the story content is rendered correctly
   test("renders the correct advice content", async () => {
     // Mock the axios.get function to return a fake response
     const mockStories = [
@@ -53,14 +53,14 @@ describe("Stories component", () => {
     ];
     vi.spyOn(axios, "get").mockResolvedValue({ data: mockStories });
 
-    // Render the Advices component
+    // Render the stroies component
     render(<Stories />);
 
-    // Wait for the advice items to be rendered
+    // Wait for the story items to be rendered
     await waitFor(() => screen.getByText("Story 1"));
     await waitFor(() => screen.getByText("Story 2"));
 
-    // Check that the advice content is rendered correctly
+    // Check that the story content is rendered correctly
     expect(screen.getByText("Story 1")).toBeInTheDocument();
     expect(screen.getByText("Story 2")).toBeInTheDocument();
   });

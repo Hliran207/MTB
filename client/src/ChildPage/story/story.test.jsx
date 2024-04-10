@@ -7,7 +7,7 @@ const mockStories = [
   { _id: 2, story: "story 2" },
 ];
 
-// Mock Advice component to use the mock data
+// Mock story component to use the mock data
 const MockStory = () => {
   return (
     <div>
